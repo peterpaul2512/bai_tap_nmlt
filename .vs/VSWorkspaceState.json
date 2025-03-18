@@ -1,0 +1,14 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
+    ]
+  },
+  "ExpandedNodes": [
+    "\\bai_tap",
+    "\\bai_tap\\bai_001",
+    "\\bai_tap\\test_project"
+  ],
+  "PreviewInSolutionExplorer": false
+}
