@@ -1,0 +1,1 @@
+// Bài 215 (*): Tính khoảng cách trung bình giữa các giá trị trong mảng
