@@ -1,7 +1,7 @@
 //
 // Created by Admin on 3/15/2025.
 //
-// ●	Bài 211: Tính trung bình cộng các số nguyên tố trong mảng 1 chiều các số nguyên
+// Bài 211: Tính trung bình cộng các số nguyên tố trong mảng 1 chiều các số nguyên
 #include <iostream>
 #include <cmath>
 using namespace std;
