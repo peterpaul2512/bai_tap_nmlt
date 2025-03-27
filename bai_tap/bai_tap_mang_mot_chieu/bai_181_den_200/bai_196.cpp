@@ -1,0 +1,1 @@
+// ●	Bài 196: Liệt kê các số âm trong mảng 1 chiều các số nguyên
