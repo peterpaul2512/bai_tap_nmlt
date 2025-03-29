@@ -4,7 +4,7 @@ node_modules/
 cmake-build-debug/
 .vs/
 .vscode/
-.out/
+out/
 
 # Bao gồm các file khác, ví dụ .csv và .txt, ...
 *.csv
