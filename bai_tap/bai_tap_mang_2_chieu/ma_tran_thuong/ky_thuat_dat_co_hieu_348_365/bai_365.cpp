@@ -1,0 +1,1 @@
+// Bài 365: Cho 2 ma trận A và B. Đếm số lần xuất hiện của ma trận A trong ma trận B
