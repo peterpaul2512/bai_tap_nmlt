@@ -48,10 +48,11 @@ foreach(SOURCE_FILE ${SOURCE_FILES})
 
     # Kiểm tra xem target đã tồn tại chưa
     if(TARGET ${EXECUTABLE_NAME})
-        message(WARNING "Target ${EXECUTABLE_NAME} already exists for ${SOURCE_FILE}. Skipping duplicate.")
+#        message(WARNING "Target ${EXECUTABLE_NAME} already exists for ${SOURCE_FILE}. Skipping duplicate.")
         continue()
     endif()
 
+    # Tạo executable từ file .cpp
     # Tạo executable từ file .cpp
     add_executable(${EXECUTABLE_NAME} ${SOURCE_FILE})
 endforeach()
