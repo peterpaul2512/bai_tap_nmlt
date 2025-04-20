@@ -8,7 +8,6 @@ out/
 
 # Bao gồm các file khác, ví dụ .csv và .txt, ...
 *.csv
-*.txt
 *.xlsx
 *.doc
 *.docx
