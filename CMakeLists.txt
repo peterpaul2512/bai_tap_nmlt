@@ -28,34 +28,35 @@ file(GLOB SOURCE_FILES CONFIGURE_DEPENDS
         "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_1_chieu/bai_241_den_260/*.cpp"
         "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/*.cpp"
         "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/ma_tran_thuong/ky_thuat_dat_co_hieu_348_365/*.cpp"
-        "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/ma_tran_thuong/ky_thuat_tinh_toan_320_347/*.cpp"
+        "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/ma_tran_thuong/ky_thuat_dem_334_347/*.cpp"
+        "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/ma_tran_thuong/ky_thuat_tinh_toan_320_333/*.cpp"
         "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/ma_tran_thuong/ky_thuat_xu_ly_ma_tran_392_406/*.cpp"
-        "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/ma_tran_thuong/ma_tran_311_323/*.cpp"
+        "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/ma_tran_thuong/ma_tran_311_319/*.cpp"
         "${CMAKE_SOURCE_DIR}/bai_tap/test_project/*.cpp"
 )
 
 # Kiểm tra xem có file nào được tìm thấy không
-if(NOT SOURCE_FILES)
+if (NOT SOURCE_FILES)
     message(WARNING "No .cpp files found in specified directories")
-else()
+else ()
     message(STATUS "Found source files: ${SOURCE_FILES}")
-endif()
+endif ()
 
 # Tạo một executable cho mỗi file .cpp
-foreach(SOURCE_FILE ${SOURCE_FILES})
+foreach (SOURCE_FILE ${SOURCE_FILES})
     # Lấy tên file không có đường dẫn và phần mở rộng
     get_filename_component(EXECUTABLE_NAME ${SOURCE_FILE} NAME_WE)
 
     # Kiểm tra xem target đã tồn tại chưa
-    if(TARGET ${EXECUTABLE_NAME})
-#        message(WARNING "Target ${EXECUTABLE_NAME} already exists for ${SOURCE_FILE}. Skipping duplicate.")
+    if (TARGET ${EXECUTABLE_NAME})
+        #        message(WARNING "Target ${EXECUTABLE_NAME} already exists for ${SOURCE_FILE}. Skipping duplicate.")
         continue()
-    endif()
+    endif ()
 
     # Tạo executable từ file .cpp
     # Tạo executable từ file .cpp
     add_executable(${EXECUTABLE_NAME} ${SOURCE_FILE})
-endforeach()
+endforeach ()
 
 # In số lượng file tìm thấy
 list(LENGTH SOURCE_FILES FILE_COUNT)
