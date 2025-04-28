@@ -33,6 +33,7 @@ file(GLOB SOURCE_FILES CONFIGURE_DEPENDS
         "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/ma_tran_thuong/ky_thuat_xu_ly_ma_tran_392_406/*.cpp"
         "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_mang_2_chieu/ma_tran_thuong/ma_tran_311_319/*.cpp"
         "${CMAKE_SOURCE_DIR}/bai_tap/test_project/*.cpp"
+        "${CMAKE_SOURCE_DIR}/bai_tap/bai_tap_struct/*.cpp"
 )
 
 # Kiểm tra xem có file nào được tìm thấy không
