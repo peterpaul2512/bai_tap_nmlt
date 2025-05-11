@@ -12,6 +12,7 @@ struct DaGiac {
     Diem d[100];
     int n;
 };
+void nhapDiem(Diem &d);
 
 void nhapDaGiac(DaGiac &dg);
 
@@ -28,15 +29,19 @@ int main() {
     cout << "Chu vi cua da giac la: " << tinhChuVi(dg);
 }
 
+void nhapDiem(Diem &d) {
+	cout << "Nhap x: ";
+	cin >> d.x;
+	cout << "Nhap y: ";
+	cin >> d.y;
+};
+
 void nhapDaGiac(DaGiac &dg) {
     cout << "Nhap so dinh cua da giac: ";
     cin >> dg.n;
     for (int i = 0; i < dg.n; i++) {
         cout << "Nhap toa do dinh thu " << i + 1 << ": " << endl;
-        cout << "x = ";
-        cin >> dg.d[i].x;
-        cout << "y = ";
-        cin >> dg.d[i].y;
+        nhapDiem(dg.d[i]);
     }
 }
 

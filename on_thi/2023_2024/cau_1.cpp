@@ -6,11 +6,11 @@ void tinhTongUocSoLe(int n);
 
 int main() {
     int n;
-    cout << "Nhap vao so nguyen duong n: ";
+    cout << "Nhap so nguyen duong n: ";
     cin >> n;
     if (n <= 0) {
-        cout << "Vui long nhap vao so nguyen duong n lon hon 0." << endl;
-        return 1;
+        cout << "Invalid input !" << endl;
+        return 0;
     }
     tinhTongUocSoLe(n);
     return 0;
@@ -18,12 +18,11 @@ int main() {
 
 void tinhTongUocSoLe(int n) {
     int sum = 0;
+
     for (int i = 1; i < n; i++) {
-        if (n % i == 0) {
-            if (i % 2 != 0) {
-                sum += i;
-            }
+        if (n % i == 0 && i % 2 != 0) {
+            sum += i;
         }
     }
-    cout << "Tong cac uoc so le cua " << n << " la: " << sum << endl;
+    cout << "Tong cac uoc so le la : " << sum << endl;
 }

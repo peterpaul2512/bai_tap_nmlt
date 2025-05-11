@@ -5,20 +5,25 @@ using namespace std;
 
 void nhapMang(int arr[], int n);
 
-void xuatMang(int arr[], int n);
-
 bool isPrime(int n);
 
-void tinhTrungBinhCong(int arr[], int n);
+void tinhTBC(int arr[], int n);
 
 int main() {
+    int arr[100];
     int n;
-    cout << "Nhap so phan tu cua mang: ";
+    cout << "Nhap so luong ptu mang: ";
     cin >> n;
-    int arr[n];
     nhapMang(arr, n);
-    xuatMang(arr, n);
-    tinhTrungBinhCong(arr, n);
+    tinhTBC(arr, n);
+    return 0;
+};
+
+void nhapMang(int arr[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << "Nhap a[" << i << "] = ";
+        cin >> arr[i];
+    }
 }
 
 bool isPrime(int n) {
@@ -33,22 +38,10 @@ bool isPrime(int n) {
     return true;
 }
 
-void nhapMang(int arr[], int n) {
-    for (int i = 0; i < n; i++) {
-        cout << "Nhap phan tu thu " << i << ": ";
-        cin >> arr[i];
-    }
-}
-
-void xuatMang(int arr[], int n) {
-    for (int i = 0; i < n; i++) {
-        cout << "a[" << i << "]: " << arr[i] << endl;
-    }
-}
-
-void tinhTrungBinhCong(int arr[], int n) {
+void tinhTBC(int arr[], int n) {
     float sum = 0.0;
-    int count = 0;
+    float avg = 0.0;
+    float count = 0.0;
     for (int i = 0; i < n; i++) {
         if (isPrime(arr[i])) {
             sum += arr[i];
@@ -56,9 +49,9 @@ void tinhTrungBinhCong(int arr[], int n) {
         }
     }
     if (count == 0) {
-        cout << "Khong co so nguyen to trong mang";
-    } else {
-        float avg = sum / count;
-        cout << "Trung binh cong cac so nguyen to trong mang: " << avg;
+        cout << "Khong co SNT ";
+        return;
     }
-}
+    avg = sum / count;
+    cout << "TBC cac SNT la: " << avg << endl;
+};
